@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Agentic Harness workspace UI skeleton</title><desc id="desc">Textual workspace layout: header, run list with actions, selected run details, change summary, Engineer Reviewer Planner status, activity log, footer shortcuts.</desc>
+<style>text{font-family:Inter,Arial,sans-serif}.h{fill:#f5f7ff;font-size:42px;font-weight:700}.sub{fill:#aab9d2;font-size:20px}.label{fill:#9fb1d2;font-size:18px;font-weight:700;letter-spacing:2px}.body{fill:#e6edfa;font-size:21px}.muted{fill:#9caec8;font-size:18px}.mono{font-family:'IBM Plex Mono',monospace}.accent{fill:#76e5d0}</style>
+<rect width="1440" height="900" fill="#0b1020"/>
+<text x="70" y="73" class="h">Workspace TUI · layout skeleton</text><text x="70" y="111" class="sub">The run list, selected run, agents and live activity in one terminal view</text>
+<rect x="70" y="148" width="1300" height="684" rx="18" fill="#111b31" stroke="#405276" stroke-width="2"/>
+<rect x="70" y="148" width="1300" height="57" rx="18" fill="#1d2b45"/><rect x="70" y="185" width="1300" height="20" fill="#1d2b45"/>
+<text x="95" y="184" class="body" font-weight="700">Agentic Harness</text><text x="1170" y="184" class="muted">12:34:56</text>
+<rect x="88" y="223" width="286" height="547" rx="12" fill="#151f37" stroke="#405276"/>
+<text x="109" y="255" class="label">RUNS</text>
+<rect x="102" y="274" width="258" height="67" rx="9" fill="#294765" stroke="#76e5d0" stroke-width="2"/><text x="119" y="301" class="body">● current-project</text><text x="119" y="327" class="muted">running · turn 3</text>
+<rect x="102" y="350" width="258" height="65" rx="9" fill="#1c2942"/><text x="119" y="378" class="body">○ sample-run</text><text x="119" y="403" class="muted">completed</text>
+<rect x="102" y="423" width="258" height="65" rx="9" fill="#1c2942"/><text x="119" y="451" class="body">○ another-project</text><text x="119" y="476" class="muted">idle</text>
+<rect x="104" y="714" width="76" height="40" rx="7" fill="#294765"/><rect x="188" y="714" width="76" height="40" rx="7" fill="#294765"/><rect x="272" y="714" width="86" height="40" rx="7" fill="#294765"/><text x="119" y="741" class="muted">New</text><text x="206" y="741" class="muted">Add</text><text x="280" y="741" class="muted">Remove</text>
+<rect x="392" y="223" width="960" height="182" rx="12" fill="#17223c" stroke="#405276"/>
+<text x="416" y="255" class="label">SELECTED RUN · DETAILS</text><text x="416" y="293" class="body">Objective: implement the requested change</text><text x="416" y="326" class="muted">Status: running  ·  mode: Planner DAG  ·  cycle: 3 / 5</text><text x="416" y="358" class="muted">Acceptance criteria, task, run controls, final summary</text>
+<rect x="392" y="417" width="960" height="50" rx="9" fill="#1c2b43" stroke="#405276"/><text x="416" y="450" class="body">Changes summary   +42  −8     3 files</text>
+<rect x="392" y="479" width="305" height="102" rx="10" fill="#17223c" stroke="#405276"/><rect x="709" y="479" width="305" height="102" rx="10" fill="#17223c" stroke="#405276"/><rect x="1026" y="479" width="326" height="102" rx="10" fill="#17223c" stroke="#405276"/>
+<text x="414" y="511" class="label">ENGINEER</text><text x="414" y="550" class="body">Claude · editing / tests</text><text x="731" y="511" class="label">REVIEWER</text><text x="731" y="550" class="body">Codex · read only</text><text x="1048" y="511" class="label">PLANNER</text><text x="1048" y="550" class="body">tickets / dependencies</text>
+<rect x="392" y="593" width="960" height="177" rx="12" fill="#121b30" stroke="#405276"/>
+<text x="416" y="625" class="label">ACTIVITY</text><text x="416" y="660" class="muted mono">12:31  engineer  started ticket 2</text><text x="416" y="692" class="muted mono">12:32  evidence  tests passed; diff captured</text><text x="416" y="724" class="muted mono">12:33  reviewer  reviewing evidence…</text>
+<rect x="70" y="782" width="1300" height="50" rx="0" fill="#1d2b45"/><text x="94" y="814" class="muted mono">n new  ·  r run  ·  f changes  ·  k plan  ·  d decision  ·  h history  ·  q quit</text>
+<text x="70" y="871" class="muted">Schematic view of WorkspaceApp.compose(); content and modal dialogs vary by run state.</text>
+</svg>

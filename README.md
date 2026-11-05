@@ -4,13 +4,17 @@ An experimental, local harness for an engineer agent and an independent reviewer
 turn sequence, evidence, human decisions and restart state visible without adding an agent service
 or external task manager.
 
-The default flow uses two locally installed terminal agents:
+## System at a glance
 
-```text
-Claude Code (write/test) -> Codex (read-only review) -> Claude Code
-                                      |
-                              human decision when needed
-```
+![Animated system flow: the goal enters an optional planner, the engineer makes changes, evidence is captured, and a read-only reviewer returns a verdict. Revisions loop back; a human decides when needed. State and activity are persisted.](docs/visuals/system-flow.gif)
+
+The default single-run path goes from the engineer to evidence capture and an independent reviewer. A reviewer can request another engineer turn, require a human decision, or mark the run done. Planner mode adds dependent tickets, isolated worktrees for parallel work, and a final evaluation after integration. The workspace TUI follows live events while state, transcripts, and artifacts are saved locally.
+
+### Workspace UI skeleton
+
+![Schematic of the workspace TUI: run list and actions on the left; selected run details, changes summary, Engineer, Reviewer and Planner status, and activity log on the right; shortcuts in the footer.](docs/visuals/ui-skeleton.svg)
+
+The diagrams are conceptual; the TUI content and dialogs vary with run state. The [animation source](docs/visuals/system-flow-source/index.html) is included for editing or rerendering.
 
 The harness does not make API requests itself and does not use SDKs, MCP, or a multi-agent framework. It
 starts the existing `claude` and `codex` executables as local subprocesses in the selected project
