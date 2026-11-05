@@ -1,0 +1,29 @@
+<template>
+<style>
+#decide{position:absolute;inset:0;background:#f6f3ec}svg{width:100%;height:100%;display:block;font-family:Inter,Arial,sans-serif}
+.k{fill:#49607a;font-size:23px;font-weight:700;letter-spacing:3px}.title{fill:#142334;font-size:69px;font-weight:900;letter-spacing:-3px}.copy{fill:#53657a;font-size:25px}.role{fill:#142334;font-size:35px;font-weight:800}.detail{fill:#53657a;font-size:24px}.line{fill:none;stroke:#9fb0c1;stroke-width:4;stroke-linecap:round}
+</style>
+<div id="decide" data-composition-id="decide" data-width="1440" data-height="900">
+<svg viewBox="0 0 1440 900">
+<rect width="1440" height="900" fill="#f6f3ec"/>
+<circle cx="84" cy="72" r="10" fill="#227ec5"/><text x="110" y="80" class="k">AGENTIC HARNESS</text><text x="1275" y="80" class="k">03 / 03</text>
+<rect x="80" y="113" width="1280" height="4" rx="2" fill="#d9e2e9"/><rect x="80" y="113" width="1280" height="4" rx="2" fill="#227ec5"/>
+<g id="dec-heading"><text x="80" y="246" class="title">A verdict, then a choice.</text><text x="83" y="306" class="copy">The harness routes the next turn. You stay in control.</text></g>
+<g id="dec-verdict"><rect x="518" y="353" width="404" height="94" rx="47" fill="#173454"/><text x="720" y="411" text-anchor="middle" fill="#fff" font-size="29" font-weight="700">Reviewer verdict</text></g>
+<path class="line" d="M720 447 V486 M252 486 H1188 M252 486 V520 M720 486 V520 M1188 486 V520"/>
+<g id="dec-revise"><rect x="80" y="520" width="344" height="158" rx="22" fill="#e4f4ee" stroke="#a9d4c4" stroke-width="2"/><text x="108" y="575" class="role">Revise</text><text x="108" y="619" class="detail">Back to the engineer</text></g>
+<g id="dec-human"><rect x="548" y="520" width="344" height="158" rx="22" fill="#fff2e8" stroke="#e8c2aa" stroke-width="2"/><text x="576" y="575" class="role">Ask a human</text><text x="576" y="619" class="detail">Decision or context</text></g>
+<g id="dec-done"><rect x="1016" y="520" width="344" height="158" rx="22" fill="#eaf3ff" stroke="#afc9e9" stroke-width="2"/><text x="1044" y="575" class="role">Done</text><text x="1044" y="619" class="detail">Final summary</text></g>
+<g id="dec-footer"><rect x="80" y="730" width="1280" height="80" rx="18" fill="#e9eef3"/><circle cx="113" cy="769" r="8" fill="#227ec5"/><text x="138" y="778" class="detail">Live TUI + durable local state · events · artifacts</text></g>
+</svg></div>
+<script>
+const tl=gsap.timeline({paused:true});
+tl.fromTo("#dec-heading",{opacity:0,y:18},{opacity:1,y:0,duration:.45,ease:"power4.out"},.1);
+tl.fromTo("#dec-verdict",{opacity:0,y:18},{opacity:1,y:0,duration:.5,ease:"expo.out"},.55);
+tl.fromTo("#dec-revise",{opacity:0,y:18},{opacity:1,y:0,duration:.5,ease:"expo.out"},1.12);
+tl.fromTo("#dec-human",{opacity:0,y:18},{opacity:1,y:0,duration:.5,ease:"expo.out"},1.45);
+tl.fromTo("#dec-done",{opacity:0,y:18},{opacity:1,y:0,duration:.5,ease:"expo.out"},1.78);
+tl.fromTo("#dec-footer",{opacity:0},{opacity:1,duration:.5,ease:"power2.out"},1.85);
+window.__timelines["decide"]=tl;
+</script>
+</template>

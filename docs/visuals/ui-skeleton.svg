@@ -1,24 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
-<title id="title">Agentic Harness workspace UI skeleton</title><desc id="desc">Textual workspace layout: header, run list with actions, selected run details, change summary, Engineer Reviewer Planner status, activity log, footer shortcuts.</desc>
-<style>text{font-family:Inter,Arial,sans-serif}.h{fill:#f5f7ff;font-size:42px;font-weight:700}.sub{fill:#aab9d2;font-size:20px}.label{fill:#9fb1d2;font-size:18px;font-weight:700;letter-spacing:2px}.body{fill:#e6edfa;font-size:21px}.muted{fill:#9caec8;font-size:18px}.mono{font-family:'IBM Plex Mono',monospace}.accent{fill:#76e5d0}</style>
-<rect width="1440" height="900" fill="#0b1020"/>
-<text x="70" y="73" class="h">Workspace TUI · layout skeleton</text><text x="70" y="111" class="sub">The run list, selected run, agents and live activity in one terminal view</text>
-<rect x="70" y="148" width="1300" height="684" rx="18" fill="#111b31" stroke="#405276" stroke-width="2"/>
-<rect x="70" y="148" width="1300" height="57" rx="18" fill="#1d2b45"/><rect x="70" y="185" width="1300" height="20" fill="#1d2b45"/>
-<text x="95" y="184" class="body" font-weight="700">Agentic Harness</text><text x="1170" y="184" class="muted">12:34:56</text>
-<rect x="88" y="223" width="286" height="547" rx="12" fill="#151f37" stroke="#405276"/>
-<text x="109" y="255" class="label">RUNS</text>
-<rect x="102" y="274" width="258" height="67" rx="9" fill="#294765" stroke="#76e5d0" stroke-width="2"/><text x="119" y="301" class="body">● current-project</text><text x="119" y="327" class="muted">running · turn 3</text>
-<rect x="102" y="350" width="258" height="65" rx="9" fill="#1c2942"/><text x="119" y="378" class="body">○ sample-run</text><text x="119" y="403" class="muted">completed</text>
-<rect x="102" y="423" width="258" height="65" rx="9" fill="#1c2942"/><text x="119" y="451" class="body">○ another-project</text><text x="119" y="476" class="muted">idle</text>
-<rect x="104" y="714" width="76" height="40" rx="7" fill="#294765"/><rect x="188" y="714" width="76" height="40" rx="7" fill="#294765"/><rect x="272" y="714" width="86" height="40" rx="7" fill="#294765"/><text x="119" y="741" class="muted">New</text><text x="206" y="741" class="muted">Add</text><text x="280" y="741" class="muted">Remove</text>
-<rect x="392" y="223" width="960" height="182" rx="12" fill="#17223c" stroke="#405276"/>
-<text x="416" y="255" class="label">SELECTED RUN · DETAILS</text><text x="416" y="293" class="body">Objective: implement the requested change</text><text x="416" y="326" class="muted">Status: running  ·  mode: Planner DAG  ·  cycle: 3 / 5</text><text x="416" y="358" class="muted">Acceptance criteria, task, run controls, final summary</text>
-<rect x="392" y="417" width="960" height="50" rx="9" fill="#1c2b43" stroke="#405276"/><text x="416" y="450" class="body">Changes summary   +42  −8     3 files</text>
-<rect x="392" y="479" width="305" height="102" rx="10" fill="#17223c" stroke="#405276"/><rect x="709" y="479" width="305" height="102" rx="10" fill="#17223c" stroke="#405276"/><rect x="1026" y="479" width="326" height="102" rx="10" fill="#17223c" stroke="#405276"/>
-<text x="414" y="511" class="label">ENGINEER</text><text x="414" y="550" class="body">Claude · editing / tests</text><text x="731" y="511" class="label">REVIEWER</text><text x="731" y="550" class="body">Codex · read only</text><text x="1048" y="511" class="label">PLANNER</text><text x="1048" y="550" class="body">tickets / dependencies</text>
-<rect x="392" y="593" width="960" height="177" rx="12" fill="#121b30" stroke="#405276"/>
-<text x="416" y="625" class="label">ACTIVITY</text><text x="416" y="660" class="muted mono">12:31  engineer  started ticket 2</text><text x="416" y="692" class="muted mono">12:32  evidence  tests passed; diff captured</text><text x="416" y="724" class="muted mono">12:33  reviewer  reviewing evidence…</text>
-<rect x="70" y="782" width="1300" height="50" rx="0" fill="#1d2b45"/><text x="94" y="814" class="muted mono">n new  ·  r run  ·  f changes  ·  k plan  ·  d decision  ·  h history  ·  q quit</text>
-<text x="70" y="871" class="muted">Schematic view of WorkspaceApp.compose(); content and modal dialogs vary by run state.</text>
+<title id="title">Agentic Harness workspace layout</title>
+<desc id="desc">A simple layout skeleton: runs sidebar on the left, run details and changes above three agent status panels, activity log below, and footer shortcuts.</desc>
+<style>text{font-family:Inter,Arial,sans-serif}.title{fill:#142334;font-size:59px;font-weight:900;letter-spacing:-2px}.sub{fill:#53657a;font-size:25px}.brand{fill:#f5f8fb;font-size:24px;font-weight:700;letter-spacing:2px}.label{fill:#a8bfd3;font-size:22px;font-weight:700;letter-spacing:2px}.small{fill:#cbd8e5;font-size:24px}.hint{fill:#53657a;font-size:23px}.faint{fill:#4b6078}</style>
+<rect width="1440" height="900" fill="#f6f3ec"/>
+<circle cx="84" cy="77" r="10" fill="#227ec5"/><text x="110" y="84" fill="#49607a" font-family="Inter,Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="3">AGENTIC HARNESS</text>
+<text x="80" y="185" class="title">The workspace at a glance.</text>
+<text x="82" y="229" class="sub">One run list. One live view. All decisions visible.</text>
+<rect x="80" y="282" width="1280" height="535" rx="24" fill="#132338"/>
+<rect x="80" y="282" width="1280" height="65" rx="24" fill="#1b3551"/><rect x="80" y="325" width="1280" height="22" fill="#1b3551"/>
+<circle cx="111" cy="316" r="8" fill="#68d8c1"/><text x="133" y="324" class="brand">WORKSPACE</text>
+<rect x="100" y="367" width="258" height="388" rx="15" fill="#1b2f48"/>
+<text x="122" y="404" class="label">RUNS</text>
+<rect x="118" y="425" width="222" height="55" rx="9" fill="#266c9a"/><rect x="132" y="444" width="138" height="16" rx="8" fill="#d5e8f3"/>
+<rect x="118" y="490" width="222" height="55" rx="9" fill="#253d59"/><rect x="132" y="509" width="112" height="16" rx="8" fill="#7993ad"/>
+<rect x="118" y="555" width="222" height="55" rx="9" fill="#253d59"/><rect x="132" y="574" width="156" height="16" rx="8" fill="#7993ad"/>
+<rect x="118" y="699" width="66" height="36" rx="8" fill="#36536d"/><rect x="195" y="699" width="66" height="36" rx="8" fill="#36536d"/><rect x="272" y="699" width="66" height="36" rx="8" fill="#36536d"/>
+<rect x="378" y="367" width="962" height="122" rx="15" fill="#1b2f48"/>
+<text x="404" y="405" class="label">SELECTED RUN</text><rect x="404" y="426" width="575" height="15" rx="7" fill="#b6c7d8"/><rect x="404" y="454" width="372" height="12" rx="6" fill="#718aa5"/>
+<rect x="378" y="501" width="962" height="48" rx="12" fill="#28405a"/><text x="404" y="533" class="small">CHANGES</text><rect x="586" y="518" width="242" height="13" rx="6" fill="#8ba4bc"/>
+<rect x="378" y="561" width="304" height="85" rx="13" fill="#1b2f48"/><rect x="694" y="561" width="304" height="85" rx="13" fill="#1b2f48"/><rect x="1010" y="561" width="330" height="85" rx="13" fill="#1b2f48"/>
+<circle cx="404" cy="598" r="7" fill="#68d8c1"/><text x="424" y="606" class="small">ENGINEER</text><circle cx="720" cy="598" r="7" fill="#a996e9"/><text x="740" y="606" class="small">REVIEWER</text><circle cx="1036" cy="598" r="7" fill="#f0bd6e"/><text x="1056" y="606" class="small">PLANNER</text>
+<rect x="378" y="658" width="962" height="97" rx="13" fill="#1b2f48"/><text x="404" y="694" class="label">ACTIVITY</text><rect x="404" y="711" width="790" height="10" rx="5" fill="#66819d"/><rect x="404" y="732" width="570" height="10" rx="5" fill="#4b6683"/>
+<rect x="80" y="769" width="1280" height="48" rx="0" fill="#1b3551"/><text x="110" y="802" class="small">SHORTCUTS</text><rect x="309" y="786" width="463" height="12" rx="6" fill="#6984a0"/>
+<text x="80" y="866" class="hint">Runs on the left · selected run and live activity on the right</text>
 </svg>
